@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NFTs</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="nft-page">
+    <!-- Frame elements -->
+    <header class="main-header">
+        <a href="index.html">
+            <img src="images/TextLogo.png" alt="Text Logo" class="text-logo">
+        </a>
+        <div class="menu-container">
+            <a href="#" onclick="toggleMenu()" class="menu-trigger">
+                <img src="images/logo.png" alt="Logo" class="logo">
+            </a>
+            <nav class="menu">
+                <a href="index.html#about" onclick="toggleMenu()">About HoS</a>
+                <a href="#" onclick="toggleMenu()">NFT's</a>
+                <a href="index.html#focg" onclick="toggleMenu()">FOCG's</a>
+                <a href="index.html#contact" onclick="toggleMenu()">Contact</a>
+            </nav>
+        </div>
+    </header>
+    
+    <div class="left-bar"></div>
+    <div class="right-bar"></div>
+    <footer class="main-footer"></footer>
+
+    <!-- Content elements -->
+    <div class="flash-bg"></div>
+    <div id="nft-left" class="hover-image"></div>
+    <div id="nft-right" class="hover-image"></div>
+
+    <svg class="button-layer" viewBox="0 0 2560 1440" preserveAspectRatio="xMidYMid slice">
+        <defs>
+            <style>
+                .cls-1 {
+                    fill: none;
+                    stroke: none;
+                    stroke-width: 0;
+                }
+                .frame-button {
+                    fill: none;
+                    stroke: none;
+                    stroke-width: 0;
+                }
+            </style>
+        </defs>
+        <rect class="cls-1" width="2560" height="1440"/>
+        <rect id="left-frame" class="cls-1 frame-button" x="395" y="281" width="464" height="543"/>
+        <a href="https://3q.club/" target="_blank">
+            <rect id="right-frame" class="cls-1 frame-button" x="1717" y="285" width="463" height="534"/>
+        </a>
+    </svg>
+
+    <script src="menu.js"></script>
+    <script src="nfts.js"></script>
+</body>
+</html>

@@ -1,0 +1,308 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Home page styles */
+body {
+    background: url('images/BG.jpg') no-repeat right center fixed;
+    background-size: cover;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+/* Home page hover effect */
+.flash-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('images/BG2.jpg') no-repeat right center fixed;
+    background-size: cover;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.flash-bg.active {
+    opacity: 1;
+}
+
+.button-layer {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    object-position: right center;
+}
+
+.button-container {
+    transform-box: fill-box;
+    transform-origin: center;
+}
+
+.button-path {
+    fill: transparent;
+    pointer-events: auto;
+    cursor: pointer;
+}
+
+.hover-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: right center;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+    pointer-events: none;
+    z-index: 2;
+}
+
+#nft-hover {
+    background-image: url('images/NFT.png');
+}
+
+#focg-hover {
+    background-image: url('images/FOCG.png');
+}
+
+.main-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120px;
+    background-color: rgb(255, 255, 255);
+    z-index: 5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 120px;
+}
+
+.text-logo {
+    height: 60%;
+    width: auto;
+    object-fit: contain;
+    object-position: right;
+}
+
+.logo {
+    height: 60%;
+    width: auto;
+    object-fit: contain;
+    object-position: right;
+}
+
+.main-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 120px;
+    background-color: rgb(255, 255, 255);
+    z-index: 5;
+}
+
+.left-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 120px;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    z-index: 4;
+}
+
+.right-bar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 120px;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    z-index: 4;
+}
+
+.content-area {
+    position: fixed;
+    top: 120px;
+    left: 120px;
+    right: 120px;
+    bottom: 120px;
+    overflow-y: auto;
+}
+
+.main-header a {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.main-header a:first-child {
+    margin-right: auto;  /* Push to left */
+}
+
+.main-header a:last-child {
+    margin-left: auto;   /* Push to right */
+}
+
+.menu-container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.menu-trigger {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    z-index: 6;
+}
+
+.menu {
+    position: fixed;
+    top: 120px;
+    right: -300px;
+    width: 300px;
+    height: calc(100vh - 240px);
+    background-color: white;
+    transition: right 0.3s ease;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0;             /* Remove gap completely */
+}
+
+.menu a {
+    display: block;
+    width: 100%;
+    color: black;
+    text-decoration: none;
+    font-size: 24px;
+    transition: color 0.3s ease;
+    text-align: center;
+    line-height: 1;      /* Tight line height */
+    margin: 4px 0;       /* Small margin instead of gap */
+    padding: 0;          /* Remove any padding */
+}
+
+.menu a:hover {
+    color: #666;
+}
+
+.menu.active {
+    right: 0;
+}
+
+.menu a {
+    display: block;
+    width: 100%;
+    color: black;
+    text-decoration: none;
+    font-size: 24px;
+    transition: color 0.3s ease;
+    text-align: center;
+    line-height: 1;
+}
+
+.menu a:hover {
+    color: #666;
+}
+
+/* NFT page specific styles */
+body.nft-page {
+    background: url('images/nftsBG1.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.nft-page .flash-bg {
+    background: url('images/nftsBG.jpg') no-repeat center center fixed;
+    background-size: cover;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.nft-page .hover-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.nft-page .button-layer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+}
+
+.nft-page .button-container {
+    fill: rgba(255, 0, 0, 0.3);  /* Semi-transparent red to see the containers */
+    stroke: red;                  /* Red outline */
+    stroke-width: 2;             /* Outline thickness */
+    pointer-events: auto;
+    cursor: pointer;
+}
+
+#nft-left {
+    background-image: url('images/NFTLeft.jpg');
+}
+
+#nft-right {
+    background-image: url('images/NFTRight.jpg');
+}
+
+.nft-page .cls-1 {
+    fill: none;
+    stroke: rgba(255, 0, 0, 0.8);
+    stroke-width: 4;
+    pointer-events: auto;  /* Enable mouse events */
+    cursor: pointer;       /* Show pointer cursor */
+}
+
+.nft-page .frame-button {
+    fill: transparent;
+    stroke: none;
+    stroke-width: 0;
+    pointer-events: all;
+    cursor: pointer;
+}
+
+/* Update FOCG page styles */
+body.focg-page {
+    background: url('images/FOCGBG.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+ 
