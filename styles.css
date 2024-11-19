@@ -6,7 +6,7 @@
 
 /* Home page styles */
 body {
-    background: url('images/BG.jpg') no-repeat right center fixed;
+    background: url('images/bg.jpg') no-repeat right center fixed;
     background-size: cover;
     min-height: 100vh;
     margin: 0;
@@ -226,7 +226,7 @@ body {
 
 /* NFT page specific styles */
 body.nft-page {
-    background: url('images/nftsBG1.jpg') no-repeat center center fixed;
+    background: url('images/nftsBG.jpg') no-repeat center center fixed;
     background-size: cover;
 }
 
