@@ -226,12 +226,12 @@ body {
 
 /* NFT page specific styles */
 body.nft-page {
-    background: url('images/nftsBG.jpg') no-repeat center center fixed;
+    background: url('images/nftsBG1.jpg') no-repeat center center fixed;
     background-size: cover;
 }
 
 .nft-page .flash-bg {
-    background: url('images/nftsBG.jpg') no-repeat center center fixed;
+    background: url('images/nftsBG1.jpg') no-repeat center center fixed;
     background-size: cover;
     opacity: 0;
     transition: opacity 0.2s ease-in-out;
