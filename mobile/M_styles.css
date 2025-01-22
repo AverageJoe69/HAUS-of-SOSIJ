@@ -1,0 +1,149 @@
+.logo {
+    width: 51px;  /* Mobile-specific size */
+    height: 54px;
+    position: absolute;
+    left: 194px;    /* Exact Figma value */
+    top: 67px;      /* Exact Figma value */
+    z-index: 3;
+}
+
+/* Add any other mobile-specific image scaling as needed */
+
+.m-home {
+    width: 440px;
+    height: 956px;
+    position: relative;
+    background: white;
+    overflow: hidden;
+}
+
+.background {
+    width: 1444px;
+    height: 812px;
+    position: absolute;
+    left: -1004px;
+    top: 144px;
+    z-index: 1;
+}
+
+.header-bar {
+    width: 440px;
+    height: 101px;
+    position: absolute;
+    left: 0;
+    top: 43px;
+    background: white;
+    z-index: 2;
+}
+
+.m-nfts {
+    width: 440px;
+    height: 956px;
+    position: relative;
+    background: white;
+    overflow: hidden; /* Ensures background stays within bounds */
+}
+
+/* Add specific NFTs page styles here */
+
+.m-focgs {
+    width: 440px;
+    height: 956px;
+    position: relative;
+    background: white;
+}
+
+.focg-background {
+    width: 1522px;
+    height: 855px;
+    position: absolute;
+    left: -674px;
+    top: 101px;
+}
+
+.m-about {
+    width: 440px;
+    height: 956px;
+    position: relative;
+    background: white;
+}
+
+.about-background {
+    width: 1522px;
+    height: 855px;
+    position: absolute;
+    left: -674px;
+    top: 101px;
+}
+
+.m-contact {
+    width: 440px;
+    height: 956px;
+    position: relative;
+    background: white;
+}
+
+.contact-background {
+    width: 1522px;
+    height: 855px;
+    position: absolute;
+    left: -674px;
+    top: 101px;
+}
+
+.mobile-menu {
+    width: 440px;
+    height: 956px;
+    background: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 4;
+}
+
+.menu-container {
+    padding-top: 150px;
+    text-align: center;
+}
+
+.menu-items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-items li {
+    margin: 30px 0;
+}
+
+.menu-items a {
+    color: black;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Position menu items as per Figma design */
+.menu-items li:nth-child(1) { margin-top: 274px; } /* Home */
+.menu-items li:nth-child(2) { margin-top: 90px; }  /* NFTs */
+.menu-items li:nth-child(3) { margin-top: 90px; }  /* FOCGs */
+.menu-items li:nth-child(4) { margin-top: 90px; }  /* About */
+.menu-items li:nth-child(5) { margin-top: 90px; }  /* Contact */
+
+.hidden {
+    display: none;
+}
+
+.mobile-menu.hidden {
+    display: none;
+}
+
+.nft-background {
+    width: 1522px;
+    height: 855px;
+    position: absolute;
+    left: -674px;
+    top: 101px;
+    z-index: 1;
+    filter: contrast(1.2) brightness(0.9); /* Adds the grainy effect */
+}

@@ -5,7 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="alternate" media="only screen and (max-width: 768px)" href="mobile.html" />
+    <!-- Add mobile detection script -->
+    <script>
+        function isMobile() {
+            // Check for mobile devices including tablets
+            return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|Samsung|Galaxy/i.test(navigator.userAgent) 
+                || window.innerWidth <= 768;
+        }
+
+        if (isMobile()) {
+            // Store the current page path
+            const currentPath = window.location.pathname;
+            let mobilePath = '/mobile/M_Home.html';
+
+            // Map desktop paths to mobile paths
+            if (currentPath.includes('nfts.html')) {
+                mobilePath = '/mobile/M_NFTs.html';
+            } else if (currentPath.includes('focg.html')) {
+                mobilePath = '/mobile/M_FOCGs.html';
+            }
+
+            window.location.href = mobilePath;
+        }
+    </script>
+    <script>
+        if (window.innerWidth <= 768) {
+            window.location.href = '/mobile/M_Home.html';
+        }
+    </script>
 </head>
 <body>
     <!-- Frame elements -->
@@ -42,7 +69,7 @@
                 <path id="nft-button" class="button-path" d="M1145,662s0.22-1.685.63-4.788C1150.33,621.184,1180,394,1180,394l23-33,55,135,9-103,29,1s12,28,12,32,33-26,33-26l133-5,15,38,57-4,19,19-4,35,7,37,50,2-6-99,55-49-1-40,24-22,60,11s11,37,10,41,26,27,29,32,15,48,15,48l1,161,7,14,28-13,27,14-2,39-14,37-49,13-38-24-29-45,1-42-53,9,6,54s-12,21-19,24-53,3-53,3l-10-19-45,20-62-14-27,33-26,4-17-114-32-19-18,6-20,109-48-2-6-24-23,31-50-10-1-29-18,46-62-11Z"/>
             </a>
             <a href="focg.html">
-                <path id="focg-button" class="button-path" d="M544,942l-3-117,168-17,15,34,54-29,45,2,12,26,21-6,38-21,54,10,27,24,14-1,36-21,28-1,23-41s28,23,30,29,19-24,19-24l1-41s39-6,44-4,55,6,55,6l14,22s3,27,3,32-5,29-5,29l-26,15,27,19,14-12,46-34,29,13-6,41-44,43-17,21-20,8,4,30-17,23-1,34,27,48-6,16-36,14-42-26-24,21-44-15-20,25h-65l-28-16-21,21-93-6-32-17-37,27-73-5-33-14-16-62-1-52-84-21-21,128-39,1Z"/>
+                <path id="focg-button" class="button-path" d="M544,942l-3-117,168-17,15,34,54-29,45,2,12,26,21-6,38-21,54,10,27,24,14-1,36-21,28-1,23-41s28,23,30,29,19-24,19-24l-1-41s39-6,44-4,55,6,55,6l14,22s3,27,3,32-5,29-5,29l-26,15,27,19,14-12,46-34,29,13-6,41-44,43-17,21-20,8,4,30-17,23-1,34,27,48-6,16-36,14-42-26-24,21-44-15-20,25h-65l-28-16-21,21-93-6-32-17-37,27-73-5-33-14-16-62-1-52-84-21-21,128-39,1Z"/>
             </a>
         </g>
     </svg>
