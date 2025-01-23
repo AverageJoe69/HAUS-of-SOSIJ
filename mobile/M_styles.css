@@ -5,27 +5,26 @@
     box-sizing: border-box;
 }
 
-/* Base container */
+/* Base container for all pages */
 .m-home, .m-nfts, .m-focgs, .m-about, .m-contact, .m-menu {
     width: 440px;
     height: 956px;
     position: relative;
     background: white;
-    overflow: hidden;
 }
 
-/* Header bar - consistent across all pages */
+/* Header bar - updated height */
 .header-bar {
     width: 440px;
-    height: 101px;
+    height: 144px;
     position: absolute;
     left: 0;
-    top: 43px;
+    top: 0;
     background: white;
     z-index: 2;
 }
 
-/* Logo - consistent position across all pages */
+/* Logo - position unchanged */
 .logo {
     width: 51px;
     height: 54px;
@@ -35,50 +34,71 @@
     z-index: 3;
 }
 
-/* Background images - exact Figma positioning */
+/* Background images - updated dimensions */
 .background {
-    width: 1444px;
+    width: 440px;
     height: 812px;
     position: absolute;
-    left: -1004px;
+    left: 0;
     top: 144px;
     z-index: 1;
+}
+
+/* NFTs page specific text */
+.nft-text-3q {
+    left: 103px;
+    top: 216px;
+    position: absolute;
+    opacity: 0.80;
+    color: rgba(206, 63, 63, 0.80);
+    font-size: 40px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    z-index: 2;
+}
+
+.nft-text-sosij {
+    left: 250px;
+    top: 216px;
+    position: absolute;
+    color: rgba(49, 64, 167, 0.80);
+    font-size: 40px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    z-index: 2;
 }
 
 /* Menu page specific styles */
 .menu-container {
     width: 440px;
     height: 956px;
+    padding-top: 274px;
+    padding-bottom: 274px;
     background: white;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 4;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding-top: 150px;
+    gap: 42px;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .menu-items {
     list-style: none;
-    width: 100%;
+}
+
+.menu-items li a {
+    width: 440px;
     text-align: center;
-    margin-top: 50px;
-}
-
-.menu-items li {
-    margin: 30px 0;
-}
-
-.menu-items a {
     color: black;
+    font-size: 40px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
     text-decoration: none;
-    font-size: 24px;
-    font-weight: bold;
+    display: block;
 }
 
-/* Prevent overflow on all pages */
+/* Prevent overflow */
 body {
     width: 440px;
     height: 956px;
