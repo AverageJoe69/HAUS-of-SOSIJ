@@ -18,8 +18,9 @@ body {
 
 /* Base container for all pages */
 .m-home, .m-nfts, .m-focgs, .m-about, .m-contact, .m-menu {
-    width: 440px;
-    height: 100%;
+    width: 100%;
+    max-width: 440px;
+    height: 100vh;
     position: relative;
     background: white;
     overflow: hidden;
@@ -27,8 +28,9 @@ body {
 
 /* Header bar */
 .header-bar {
-    width: 440px;
-    height: 144px;
+    width: 100%;
+    height: 15vh;
+    max-height: 144px;
     position: absolute;
     top: 0;
     left: 0;
@@ -36,7 +38,7 @@ body {
     z-index: 2;
 }
 
-/* Logo - make it clickable */
+/* Logo */
 .logo-link {
     width: 51px;
     height: 54px;
@@ -56,35 +58,31 @@ body {
 /* Background images */
 .background {
     width: 100%;
-    height: 812px;
+    height: 85vh;
     position: absolute;
-    top: 144px;
+    top: 15vh;
     left: 0;
     object-fit: cover;
 }
 
 /* Menu specific styles */
 .frame-1 {
-    width: 440px;
+    width: 100%;
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 60px;
+    gap: 5vh;
     background: white;
-    position: fixed;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1;
+    padding: 10vh 0;
 }
 
 .menu-item {
     width: 100%;
     text-align: center;
     color: black;
-    font-size: 48px;
+    font-size: clamp(32px, 6vw, 48px);
     font-family: 'Inter', sans-serif;
     font-weight: 700;
     line-height: 1.2;
@@ -98,11 +96,11 @@ body {
 /* NFTs page text */
 .nft-text-3q {
     position: absolute;
-    left: 103px;
-    top: 216px;
+    left: 23%;
+    top: 22%;
     opacity: 0.80;
     color: rgba(206, 63, 63, 0.80);
-    font-size: 40px;
+    font-size: clamp(32px, 6vw, 40px);
     font-family: 'Inter', sans-serif;
     font-weight: 700;
     z-index: 2;
@@ -110,21 +108,32 @@ body {
 
 .nft-text-sosij {
     position: absolute;
-    left: 250px;
-    top: 216px;
+    left: 57%;
+    top: 22%;
     color: rgba(49, 64, 167, 0.80);
-    font-size: 40px;
+    font-size: clamp(32px, 6vw, 40px);
     font-family: 'Inter', sans-serif;
     font-weight: 700;
     z-index: 2;
 }
 
-/* Position menu items as per Figma design */
-.menu-items li:nth-child(1) { margin-top: 274px; } /* Home */
-.menu-items li:nth-child(2) { margin-top: 90px; }  /* NFTs */
-.menu-items li:nth-child(3) { margin-top: 90px; }  /* FOCGs */
-.menu-items li:nth-child(4) { margin-top: 90px; }  /* About */
-.menu-items li:nth-child(5) { margin-top: 90px; }  /* Contact */
+/* Media Queries */
+@media screen and (max-height: 700px) {
+    .frame-1 {
+        gap: 3vh;
+        padding: 5vh 0;
+    }
+    
+    .menu-item {
+        font-size: clamp(24px, 5vw, 32px);
+    }
+}
+
+@media screen and (max-height: 500px) {
+    .frame-1 {
+        gap: 2vh;
+    }
+}
 
 .hidden {
     display: none;
