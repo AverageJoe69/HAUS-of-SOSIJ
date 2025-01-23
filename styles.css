@@ -2,6 +2,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    cursor: url('../images/sosij.png') 16 16, auto !important;
+    transform: scale(0.5);
 }
 
 /* Home page styles */
@@ -11,7 +13,6 @@ body {
     min-height: 100vh;
     margin: 0;
     padding: 0;
-    cursor: url('../images/sosij.png'), auto;
 }
 
 /* Home page hover effect */
@@ -297,6 +298,6 @@ body.focg-page {
 
 /* For clickable elements */
 a, button, [role="button"] {
-    cursor: url('../images/sosij.png'), pointer;
+    cursor: url('../images/sosij.png') 16 16, pointer !important;
 }
  
