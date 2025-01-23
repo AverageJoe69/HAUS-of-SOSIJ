@@ -66,27 +66,33 @@ body {
 /* Menu specific styles */
 .frame-1 {
     width: 440px;
-    height: 956px;
-    padding-top: 274px;
-    padding-bottom: 274px;
+    height: 100vh;
     display: flex;
     flex-direction: column;
-    gap: 42px;
-    position: relative;
-    z-index: 2;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    background: white;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
 }
 
 .menu-item {
-    width: 440px;
+    width: 100%;
     text-align: center;
     color: black;
-    font-size: 40px;
+    font-size: 48px;
     font-family: 'Inter', sans-serif;
     font-weight: 700;
+    line-height: 1.2;
 }
 
 .frame-1 a {
     text-decoration: none;
+    width: 100%;
 }
 
 /* NFTs page text */
@@ -149,12 +155,9 @@ body {
 
 /* Menu page specific styles */
 .m-menu {
-    width: 100%;
-    height: 100vh;
     background: white;
-    position: fixed;
-    top: 0;
-    left: 0;
+    height: 100vh;
+    overflow: hidden;
 }
 
 .menu-logo {
