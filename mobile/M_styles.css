@@ -9,48 +9,40 @@
 .m-home, .m-nfts, .m-focgs, .m-about, .m-contact, .m-menu {
     width: 440px;
     height: 956px;
+    position: relative;
     background: white;
-    display: inline-flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
 }
 
 /* Header bar */
 .header-bar {
     width: 440px;
     height: 144px;
+    position: absolute;
+    top: 0;
+    left: 0;
     background: white;
+    z-index: 2;
 }
 
 /* Logo */
 .logo {
     width: 51px;
     height: 54px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 45px;
+    z-index: 3;
 }
 
 /* Background images */
 .background {
     width: 440px;
     height: 812px;
-}
-
-/* NFTs page specific text */
-.nft-text-3q {
-    opacity: 0.80;
-    color: rgba(206, 63, 63, 0.80);
-    font-size: 40px;
-    font-family: 'Inter', sans-serif;
-    font-weight: 700;
-    word-wrap: break-word;
-}
-
-.nft-text-sosij {
-    color: rgba(49, 64, 167, 0.80);
-    font-size: 40px;
-    font-family: 'Inter', sans-serif;
-    font-weight: 700;
-    word-wrap: break-word;
+    position: absolute;
+    top: 144px;
+    left: 0;
+    object-fit: cover;
 }
 
 /* Menu specific styles */
@@ -59,12 +51,11 @@
     height: 956px;
     padding-top: 274px;
     padding-bottom: 274px;
-    background: white;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: 42px;
     display: flex;
+    flex-direction: column;
+    gap: 42px;
+    position: relative;
+    z-index: 2;
 }
 
 .menu-item {
@@ -72,9 +63,36 @@
     text-align: center;
     color: black;
     font-size: 40px;
-    font-family: 'Inter';
+    font-family: 'Inter', sans-serif;
     font-weight: 700;
-    word-wrap: break-word;
+}
+
+.frame-1 a {
+    text-decoration: none;
+}
+
+/* NFTs page text */
+.nft-text-3q {
+    position: absolute;
+    left: 103px;
+    top: 216px;
+    opacity: 0.80;
+    color: rgba(206, 63, 63, 0.80);
+    font-size: 40px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    z-index: 2;
+}
+
+.nft-text-sosij {
+    position: absolute;
+    left: 250px;
+    top: 216px;
+    color: rgba(49, 64, 167, 0.80);
+    font-size: 40px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    z-index: 2;
 }
 
 /* Body container */
@@ -82,6 +100,7 @@ body {
     width: 440px;
     margin: 0 auto;
     background: white;
+    overflow-x: hidden;
 }
 
 /* Position menu items as per Figma design */
@@ -174,8 +193,4 @@ body {
         opacity: 1;
         transform: translateY(0);
     }
-}
-
-.frame-1 a {
-    text-decoration: none;
 }
