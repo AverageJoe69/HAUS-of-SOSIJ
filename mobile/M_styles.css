@@ -9,100 +9,77 @@
 .m-home, .m-nfts, .m-focgs, .m-about, .m-contact, .m-menu {
     width: 440px;
     height: 956px;
-    position: relative;
     background: white;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
 
-/* Header bar - updated height */
+/* Header bar */
 .header-bar {
     width: 440px;
     height: 144px;
-    position: absolute;
-    left: 0;
-    top: 0;
     background: white;
-    z-index: 2;
 }
 
-/* Logo - position unchanged */
+/* Logo */
 .logo {
     width: 51px;
     height: 54px;
-    position: absolute;
-    left: 194px;
-    top: 67px;
-    z-index: 3;
 }
 
-/* Background images - updated dimensions */
+/* Background images */
 .background {
     width: 440px;
     height: 812px;
-    position: absolute;
-    left: 0;
-    top: 144px;
-    z-index: 1;
 }
 
 /* NFTs page specific text */
 .nft-text-3q {
-    left: 103px;
-    top: 216px;
-    position: absolute;
     opacity: 0.80;
     color: rgba(206, 63, 63, 0.80);
     font-size: 40px;
     font-family: 'Inter', sans-serif;
     font-weight: 700;
-    z-index: 2;
+    word-wrap: break-word;
 }
 
 .nft-text-sosij {
-    left: 250px;
-    top: 216px;
-    position: absolute;
     color: rgba(49, 64, 167, 0.80);
     font-size: 40px;
     font-family: 'Inter', sans-serif;
     font-weight: 700;
-    z-index: 2;
+    word-wrap: break-word;
 }
 
-/* Menu page specific styles */
-.menu-container {
+/* Menu specific styles */
+.frame-1 {
     width: 440px;
     height: 956px;
     padding-top: 274px;
     padding-bottom: 274px;
     background: white;
-    display: flex;
     flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
     gap: 42px;
-    position: absolute;
-    top: 0;
-    left: 0;
+    display: flex;
 }
 
-.menu-items {
-    list-style: none;
-}
-
-.menu-items li a {
+.menu-item {
     width: 440px;
     text-align: center;
     color: black;
     font-size: 40px;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter';
     font-weight: 700;
-    text-decoration: none;
-    display: block;
+    word-wrap: break-word;
 }
 
-/* Prevent overflow */
+/* Body container */
 body {
     width: 440px;
-    height: 956px;
-    overflow: hidden;
     margin: 0 auto;
     background: white;
 }
@@ -197,4 +174,8 @@ body {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+.frame-1 a {
+    text-decoration: none;
 }
